@@ -15,6 +15,8 @@
 		63026A401B6EB7DB00919B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63026A3E1B6EB7DB00919B58 /* LaunchScreen.storyboard */; };
 		63026A4B1B6EB7DC00919B58 /* Numbers_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63026A4A1B6EB7DC00919B58 /* Numbers_GameTests.m */; };
 		63026A561B6EB7DC00919B58 /* Numbers_GameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63026A551B6EB7DC00919B58 /* Numbers_GameUITests.m */; };
+		63026A651B6EB80500919B58 /* numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 63026A641B6EB80500919B58 /* numbers.json */; };
+		63F4D9C41B6F248D00FA8202 /* QuizQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F4D9C31B6F248D00FA8202 /* QuizQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		63026A511B6EB7DC00919B58 /* Numbers GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Numbers GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63026A551B6EB7DC00919B58 /* Numbers_GameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Numbers_GameUITests.m; sourceTree = "<group>"; };
 		63026A571B6EB7DC00919B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63026A641B6EB80500919B58 /* numbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = numbers.json; sourceTree = "<group>"; };
+		63F4D9C21B6F248D00FA8202 /* QuizQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizQuestion.h; sourceTree = "<group>"; };
+		63F4D9C31B6F248D00FA8202 /* QuizQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		63026A2F1B6EB7DB00919B58 /* Numbers Game */ = {
 			isa = PBXGroup;
 			children = (
+				63026A631B6EB7EF00919B58 /* assets */,
 				63026A331B6EB7DB00919B58 /* AppDelegate.h */,
 				63026A341B6EB7DB00919B58 /* AppDelegate.m */,
 				63026A361B6EB7DB00919B58 /* ViewController.h */,
@@ -110,6 +116,8 @@
 				63026A3E1B6EB7DB00919B58 /* LaunchScreen.storyboard */,
 				63026A411B6EB7DB00919B58 /* Info.plist */,
 				63026A301B6EB7DB00919B58 /* Supporting Files */,
+				63F4D9C21B6F248D00FA8202 /* QuizQuestion.h */,
+				63F4D9C31B6F248D00FA8202 /* QuizQuestion.m */,
 			);
 			path = "Numbers Game";
 			sourceTree = "<group>";
@@ -138,6 +146,14 @@
 				63026A571B6EB7DC00919B58 /* Info.plist */,
 			);
 			path = "Numbers GameUITests";
+			sourceTree = "<group>";
+		};
+		63026A631B6EB7EF00919B58 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				63026A641B6EB80500919B58 /* numbers.json */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63026A651B6EB80500919B58 /* numbers.json in Resources */,
 				63026A401B6EB7DB00919B58 /* LaunchScreen.storyboard in Resources */,
 				63026A3D1B6EB7DB00919B58 /* Assets.xcassets in Resources */,
 				63026A3B1B6EB7DB00919B58 /* Main.storyboard in Resources */,
@@ -272,6 +289,7 @@
 			files = (
 				63026A381B6EB7DB00919B58 /* ViewController.m in Sources */,
 				63026A351B6EB7DB00919B58 /* AppDelegate.m in Sources */,
+				63F4D9C41B6F248D00FA8202 /* QuizQuestion.m in Sources */,
 				63026A321B6EB7DB00919B58 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +516,7 @@
 				63026A5C1B6EB7DC00919B58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63026A5D1B6EB7DC00919B58 /* Build configuration list for PBXNativeTarget "Numbers GameTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +525,7 @@
 				63026A5F1B6EB7DC00919B58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63026A601B6EB7DC00919B58 /* Build configuration list for PBXNativeTarget "Numbers GameUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +534,7 @@
 				63026A621B6EB7DC00919B58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

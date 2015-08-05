@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class QuizQuestion;
 
+@interface ViewController : UIViewController
+    @property (atomic) IBOutlet UILabel *label;
+    @property (atomic) IBOutlet UIButton *button;
 
 @end
 
