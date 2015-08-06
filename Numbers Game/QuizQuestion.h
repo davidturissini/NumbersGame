@@ -15,4 +15,5 @@
     @property (nonatomic) NSMutableArray *answers;
     @property (nonatomic) NSString *answer;
     @property (nonatomic) NSDictionary *questionsAnswers;
+    @property (nonatomic) NSString *question;
 @end

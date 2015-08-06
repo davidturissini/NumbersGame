@@ -37,6 +37,7 @@
     
     self.answersTable.delegate = self;
     self.answersTable.dataSource = self;
+    self.answersTable.scrollEnabled = NO;
     [self nextQuestion];
     
 }
@@ -45,10 +46,9 @@
 - (void) nextQuestion {
     self.questions = [self shuffleArray:self.questions];
     
-    NSString *question = [self.questions objectAtIndex:0];
+    self.question = [self.questions objectAtIndex:0];
+    self.answer = (NSString *)[self.questionsAnswers objectForKey:self.question];
     
-    self.answer = (NSString *)[self.questionsAnswers objectForKey:question];
-    self.questionText.text = question;
     
     
     self.answers = [[NSMutableArray alloc] init];
@@ -58,7 +58,15 @@
         [self.answers addObject:[self.questionsAnswers objectForKey:k]];
     }
     
+    self.answers = [self shuffleArray:self.answers];
+    
     [self.questions removeObjectAtIndex:0];
+    [self refreshViews];
+    
+}
+
+- (void) refreshViews {
+    self.questionText.text = self.question;
     
     [self.answersTable reloadData];
 }
@@ -96,16 +104,23 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellIdentifier = @"AnswerCell";
-    NSLog(@"tablecell");
     
     
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] init];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
     
+
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    
     NSString *answer = [self.answers objectAtIndex:indexPath.item];
-    cell.textLabel.text = answer;
+    NSNumber *answerNumber = [[NSNumber alloc] initWithLongLong:[answer longLongValue]];
+    NSString *formattedOutput = [formatter stringFromNumber:answerNumber];
+    cell.textLabel.textAlignment = NSTextAlignmentRight;
+    cell.textLabel.text = formattedOutput;
     
     return cell;
     
