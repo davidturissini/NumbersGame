@@ -12,7 +12,10 @@
 
 @end
 
+
 @implementation QuizQuestion
+
+@synthesize numCorrect, currentQuestions;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,29 +41,51 @@
     self.answersTable.delegate = self;
     self.answersTable.dataSource = self;
     self.answersTable.scrollEnabled = NO;
+    
+    self.numQuestions = 10;
+    numCorrect = 0;
+    [self pickCurrentQuestions];
     [self nextQuestion];
     
 }
 
+- (void)pickCurrentQuestions {
+    NSArray *possibleQuestions = [self shuffleArray:self.questions];
+    NSRange range = NSMakeRange(0, self.numQuestions);
+    self.currentQuestions = [possibleQuestions subarrayWithRange:range];
+}
 
-- (void) nextQuestion {
-    self.questions = [self shuffleArray:self.questions];
+
+- (NSArray *) refreshAnswers:(NSString *) currentQuestion currentAnswer:(NSString *)currentAnswer {
+    NSMutableArray *answers = [[NSMutableArray alloc] initWithObjects:currentAnswer, nil];
+    int i = 0;
+    NSArray *shuffledQuestions = [self shuffleArray:self.questions];
     
-    self.question = [self.questions objectAtIndex:0];
-    self.answer = (NSString *)[self.questionsAnswers objectForKey:self.question];
-    
-    
-    
-    self.answers = [[NSMutableArray alloc] init];
-    
-    for(int i = 0; i < 4; i += 1) {
-        NSString *k = [self.questions objectAtIndex:i];
-        [self.answers addObject:[self.questionsAnswers objectForKey:k]];
+    while(answers.count < 4) {
+        NSString *k = [shuffledQuestions objectAtIndex:i];
+        
+        if (k != currentQuestion) {
+            [answers addObject:[self.questionsAnswers objectForKey:k]];
+        }
+        
+        i += 1;
     }
     
-    self.answers = [self shuffleArray:self.answers];
     
-    [self.questions removeObjectAtIndex:0];
+    return [[NSArray alloc] initWithArray:[self shuffleArray:answers]];
+}
+
+
+- (void) nextQuestion {
+    
+    self.question = [self.currentQuestions objectAtIndex:0];
+    self.currentAnswer = (NSString *)[self.questionsAnswers objectForKey:self.question];
+    
+    
+    NSRange range = NSMakeRange(1, self.currentQuestions.count - 1);
+    self.currentQuestions = [self.currentQuestions subarrayWithRange:range];
+    self.answers = [self refreshAnswers:self.question currentAnswer:self.currentAnswer];
+    
     [self refreshViews];
     
 }
@@ -71,16 +96,22 @@
     [self.answersTable reloadData];
 }
 
+- (void)showResults {
+    [self performSegueWithIdentifier:@"ShowQuizResults" sender:self];
+    
+}
 
-- (NSMutableArray *)shuffleArray:(NSMutableArray *)array {
+
+- (NSArray *)shuffleArray:(NSArray *)array {
+    NSMutableArray *shuffle = [[NSMutableArray alloc] initWithArray:array];
     NSUInteger count = [array count];
     for (NSUInteger i = 0; i < count - 1; ++i) {
         NSInteger remainingCount = count - i;
         NSInteger exchangeIndex = i + arc4random_uniform((u_int32_t )remainingCount);
-        [array exchangeObjectAtIndex:i withObjectAtIndex:exchangeIndex];
+        [shuffle exchangeObjectAtIndex:i withObjectAtIndex:exchangeIndex];
     }
     
-    return array;
+    return [[NSArray alloc] initWithArray:shuffle];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,8 +126,24 @@
 - (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSString *answer = [self.answers objectAtIndex:indexPath.item];
     
-    if (answer == self.answer) {
+    if (answer == self.currentAnswer) {
+        numCorrect += 1;
+    }
+    
+    if (self.currentQuestions.count > 0) {
         [self nextQuestion];
+    } else {
+        [self showResults];
+    }
+    
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(QuizQuestion *)quizQuestion {
+    if ([[segue identifier] isEqualToString:@"ShowQuizResults"]) {
+        QuizResultsViewController *quizResults = (QuizResultsViewController *)[segue destinationViewController];
+    
+        quizResults.numCorrect = self.numCorrect;
+        quizResults.numQuestions = self.numQuestions;
     }
     
 }

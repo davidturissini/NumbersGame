@@ -17,6 +17,7 @@
 		63026A561B6EB7DC00919B58 /* Numbers_GameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63026A551B6EB7DC00919B58 /* Numbers_GameUITests.m */; };
 		63026A651B6EB80500919B58 /* numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 63026A641B6EB80500919B58 /* numbers.json */; };
 		63F4D9C41B6F248D00FA8202 /* QuizQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F4D9C31B6F248D00FA8202 /* QuizQuestion.m */; };
+		63F4D9C71B76CABD00FA8202 /* QuizResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F4D9C61B76CABD00FA8202 /* QuizResultsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		63026A641B6EB80500919B58 /* numbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = numbers.json; sourceTree = "<group>"; };
 		63F4D9C21B6F248D00FA8202 /* QuizQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizQuestion.h; sourceTree = "<group>"; };
 		63F4D9C31B6F248D00FA8202 /* QuizQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizQuestion.m; sourceTree = "<group>"; };
+		63F4D9C51B76CABD00FA8202 /* QuizResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizResultsViewController.h; sourceTree = "<group>"; };
+		63F4D9C61B76CABD00FA8202 /* QuizResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizResultsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				63026A301B6EB7DB00919B58 /* Supporting Files */,
 				63F4D9C21B6F248D00FA8202 /* QuizQuestion.h */,
 				63F4D9C31B6F248D00FA8202 /* QuizQuestion.m */,
+				63F4D9C51B76CABD00FA8202 /* QuizResultsViewController.h */,
+				63F4D9C61B76CABD00FA8202 /* QuizResultsViewController.m */,
 			);
 			path = "Numbers Game";
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				63026A381B6EB7DB00919B58 /* ViewController.m in Sources */,
 				63026A351B6EB7DB00919B58 /* AppDelegate.m in Sources */,
 				63F4D9C41B6F248D00FA8202 /* QuizQuestion.m in Sources */,
+				63F4D9C71B76CABD00FA8202 /* QuizResultsViewController.m in Sources */,
 				63026A321B6EB7DB00919B58 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

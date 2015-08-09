@@ -251,11 +251,51 @@
                     <connections>
                         <outlet property="answersTable" destination="0gt-6O-wpd" id="Mbe-O7-BYJ"/>
                         <outlet property="questionText" destination="4zR-Zd-tFD" id="1Tg-H4-ZQ1"/>
+                        <segue destination="1LG-r6-72H" kind="show" identifier="ShowQuizResults" id="RnS-AP-QRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5SU-ph-IN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056" y="232.5"/>
         </scene>
+        <!--Quiz Results View Controller-->
+        <scene sceneID="EAs-dI-bBo">
+            <objects>
+                <viewController id="1LG-r6-72H" customClass="QuizResultsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Grs-LA-U6j"/>
+                        <viewControllerLayoutGuide type="bottom" id="zYd-ck-jQg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jdq-kK-WM5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPj-BE-pck">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcz-7h-Ci2">
+                                <rect key="frame" x="20" y="550" width="70" height="30"/>
+                                <state key="normal" title="Play again"/>
+                                <connections>
+                                    <segue destination="x2h-A9-Khb" kind="show" id="qCX-Hf-3US"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="ZPj-BE-pck" id="s6x-Lr-QmC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrC-vP-MNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="233"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qCX-Hf-3US"/>
+    </inferredMetricsTieBreakers>
 </document>
