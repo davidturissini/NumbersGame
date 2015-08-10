@@ -24,4 +24,6 @@
     @property (nonatomic) int numQuestions;
     @property (nonatomic) UIColor *correctColor;
     @property (nonatomic) UIColor *incorrectColor;
+    @property (nonatomic) float animationDuration;
+    @property (nonatomic) float questionResultAnimationDuration;
 @end

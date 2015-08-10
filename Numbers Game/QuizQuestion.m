@@ -30,7 +30,8 @@
     NSData *data =  [NSData dataWithContentsOfFile:path];
     
     
-    
+    self.animationDuration = 0.2f;
+    self.questionResultAnimationDuration = 0.4;
     NSError *jsonParsingError;
     self.questionsAnswers = (NSDictionary *)[NSJSONSerialization
                                           JSONObjectWithData:data
@@ -162,13 +163,15 @@
     UILabel *label = self.questionText;
     
     label.layer.transform = CATransform3DMakeTranslation(0, 0, 0);
+
     
-    [UIView animateWithDuration:0.4f
+    [UIView animateWithDuration:self.animationDuration
                           delay:0
                         options:nil
                      animations:^{
-                         label.hidden = NO;
-                         label.layer.transform = CATransform3DMakeTranslation(0, -self.view.frame.size.height, 0);
+                         
+                         label.layer.transform = CATransform3DMakeTranslation(0, -self.answersTable.frame.size.height, 0);
+                         label.alpha = 0.0;
                      }
                      completion:^(BOOL finished) {
                          animationComplete();
@@ -180,13 +183,13 @@
 - (void) animateQuestionLabelIn:(void(^)(void))animationComplete {
     UILabel *label = self.questionText;
     
-    label.layer.transform = CATransform3DMakeTranslation(0, -self.view.frame.size.height, 0);
+    label.layer.transform = CATransform3DMakeTranslation(0, -self.answersTable.frame.size.height, 0);
     
-    [UIView animateWithDuration:0.4f
+    [UIView animateWithDuration:self.animationDuration
                           delay:0
                         options:nil
                      animations:^{
-                         label.hidden = NO;
+                         label.alpha = 1.0;
                          label.layer.transform = CATransform3DMakeTranslation(0, 0, 0);
                      }
                      completion:^(BOOL finished) {
@@ -207,7 +210,7 @@
         cell.layer.transform = CATransform3DMakeTranslation(0, tableHeight, 0);
         
         
-        [UIView animateWithDuration:0.4f
+        [UIView animateWithDuration:self.animationDuration
                               delay:i * 0.1
                             options:nil
                          animations:^{
@@ -237,7 +240,7 @@
     view.alpha = 0.0;
     view.hidden = NO;
     
-    [UIView animateWithDuration:0.4f animations:^{
+    [UIView animateWithDuration:self.questionResultAnimationDuration animations:^{
         
         self.questionResultView.layer.transform = CATransform3DMakeTranslation(0, 0, 0);
         view.alpha = 1.0;
@@ -252,7 +255,7 @@
     
     view.alpha = 1.0;
     
-    [UIView animateWithDuration:0.4f animations:^{
+    [UIView animateWithDuration:self.questionResultAnimationDuration animations:^{
         view.alpha = 0.0;
         
     } completion:^(BOOL finished) {
@@ -270,7 +273,7 @@
     for(int i = 0; i < visibleCells.count; i += 1) {
         UITableViewCell *cell = [visibleCells objectAtIndex:i];
         
-        [UIView animateWithDuration:0.4f
+        [UIView animateWithDuration:self.animationDuration
                               delay:(visibleCells.count - i) * 0.1
                             options:nil
                          animations:^{
