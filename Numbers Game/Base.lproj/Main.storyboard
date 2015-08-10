@@ -114,6 +114,30 @@
                                     </mask>
                                 </variation>
                             </tableView>
+                            <view userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XwS-m0-I8C">
+                                <rect key="frame" x="260" y="260" width="80" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="✓" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hns-M1-Uta">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="78"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstItem="hns-M1-Uta" firstAttribute="centerX" secondItem="XwS-m0-I8C" secondAttribute="centerX" id="sAc-jH-0ZT"/>
+                                    <constraint firstItem="hns-M1-Uta" firstAttribute="centerY" secondItem="XwS-m0-I8C" secondAttribute="centerY" id="veN-RG-Tvy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <nil key="value"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zR-Zd-tFD">
                                 <rect key="frame" x="20" y="94" width="560" height="140"/>
                                 <constraints>
@@ -151,6 +175,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XwS-m0-I8C" firstAttribute="centerX" secondItem="h3W-R5-g8h" secondAttribute="centerX" id="0KX-3o-RHW"/>
                             <constraint firstItem="0gt-6O-wpd" firstAttribute="bottom" secondItem="gXa-Hx-9FR" secondAttribute="top" id="42C-jC-xgC"/>
                             <constraint firstItem="4zR-Zd-tFD" firstAttribute="leading" secondItem="h3W-R5-g8h" secondAttribute="leadingMargin" id="Ar5-fg-w4K"/>
                             <constraint firstItem="0gt-6O-wpd" firstAttribute="leading" secondItem="h3W-R5-g8h" secondAttribute="leading" id="EXB-Jj-kFP"/>
@@ -174,6 +199,7 @@
                             <constraint firstAttribute="trailing" secondItem="0gt-6O-wpd" secondAttribute="trailing" id="fE1-qD-qHc"/>
                             <constraint firstItem="4zR-Zd-tFD" firstAttribute="leading" secondItem="h3W-R5-g8h" secondAttribute="leadingMargin" id="fSp-cf-7Zd"/>
                             <constraint firstItem="4zR-Zd-tFD" firstAttribute="leading" secondItem="h3W-R5-g8h" secondAttribute="leadingMargin" id="hPh-UJ-J8J"/>
+                            <constraint firstItem="XwS-m0-I8C" firstAttribute="centerY" secondItem="h3W-R5-g8h" secondAttribute="centerY" id="jtT-3G-vCQ"/>
                             <constraint firstItem="0gt-6O-wpd" firstAttribute="bottom" secondItem="gXa-Hx-9FR" secondAttribute="top" id="lUc-km-1ty"/>
                             <constraint firstItem="0gt-6O-wpd" firstAttribute="top" secondItem="4zR-Zd-tFD" secondAttribute="bottom" priority="800" constant="70" id="r5j-UU-JGM"/>
                             <constraint firstItem="0gt-6O-wpd" firstAttribute="bottom" secondItem="gXa-Hx-9FR" secondAttribute="top" id="sQR-Ff-DiH"/>
@@ -250,13 +276,15 @@
                     </view>
                     <connections>
                         <outlet property="answersTable" destination="0gt-6O-wpd" id="Mbe-O7-BYJ"/>
+                        <outlet property="questionResultLabel" destination="hns-M1-Uta" id="Bve-7y-wbg"/>
+                        <outlet property="questionResultView" destination="XwS-m0-I8C" id="oV9-h0-RFL"/>
                         <outlet property="questionText" destination="4zR-Zd-tFD" id="1Tg-H4-ZQ1"/>
                         <segue destination="1LG-r6-72H" kind="show" identifier="ShowQuizResults" id="RnS-AP-QRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5SU-ph-IN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="232.5"/>
+            <point key="canvasLocation" x="1056" y="232"/>
         </scene>
         <!--Quiz Results View Controller-->
         <scene sceneID="EAs-dI-bBo">

@@ -12,6 +12,8 @@
 @interface QuizQuestion : UIViewController <UITableViewDataSource, UITableViewDelegate>
     @property (nonatomic) IBOutlet UILabel *questionText;
     @property (nonatomic) IBOutlet UITableView *answersTable;
+    @property (nonatomic) IBOutlet UILabel *questionResultLabel;
+    @property (nonatomic) IBOutlet UIView *questionResultView;
     @property (nonatomic) NSMutableArray *questions;
     @property (nonatomic) NSArray *answers;
     @property (nonatomic) NSDictionary *questionsAnswers;
@@ -20,4 +22,6 @@
     @property (nonatomic) NSString *currentAnswer;
     @property (nonatomic) int numCorrect;
     @property (nonatomic) int numQuestions;
+    @property (nonatomic) UIColor *correctColor;
+    @property (nonatomic) UIColor *incorrectColor;
 @end
