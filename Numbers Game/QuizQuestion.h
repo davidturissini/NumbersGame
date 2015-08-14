@@ -18,6 +18,7 @@
     @property (nonatomic) NSArray *answers;
     @property (nonatomic) NSDictionary *questionsAnswers;
     @property (nonatomic) NSString *question;
+    @property (nonatomic) NSString *currentUnits;
     @property (nonatomic) NSArray *currentQuestions;
     @property (nonatomic) NSString *currentAnswer;
     @property (nonatomic) int numCorrect;

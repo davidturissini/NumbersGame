@@ -1,28 +1,110 @@
 {
-    "Circumference of Earth (miles)":"24901.55",
-    "Population of New York City (2014)":"19746227",
-    "Population of United States (2014)":"318857056",
-    "Size of Russia (square miles)":"6600000",
-    "Size of Rhode Island (square miles)":"1545",
-    "Land mass area of Asia (square miles)":"17212000",
-    "Estimated number of stars in Milky Way":"400000000000",
-    "Distance from Earth to Sun (miles)":"93000000",
-    "Circumference of Jupiter (miles)":"279118",
-    "Speed of sound (feet / second)":"1126",
-    "Speed of Light (miles / second)":"186000",
-    "Height of Earth's atmosphere (feet)":"330000",
-    "Number of Christians in the World":"2100000000",
-    "Height of tallest building on Earth (feet)":"2722",
-    "Height of Mt. Everest (feet)":"29029",
-    "Depth of Mariana Trench (feet)":"36070",
-    "Number of seconds in a (non-leap) year":"31536000",
-    "Record number of Tweets per second":"143199",
-    "Number of active users on Facebook (2015)":"1490000000",
-    "Approximate number of lenses in House Fly eyes":"4000",
-    "Average number of hairs on a person's head":"150000",
-    "Number of finishers in New York Marathon (2014)":"50530",
-    "Length of the Iditarod (miles)":"1000",
-    "Approximate white-tail deer population in United States":"30000000",
-    "Crusing Altitude of Boeing 747 (feet)":"35000",
-    "Total weight of the Golden Gate Bridge (tons)":"887000"
+    "Circumference of Earth (miles)":{
+        "value":"24901.55",
+        "units":"miles"
+    },
+    "Population of New York City (2014)":{
+        "value":"19746227",
+        "units":"people"
+    },
+    "Population of United States (2014)":{
+        "value":"318857056",
+        "units":"people"
+    },
+    "Size of Russia":{
+        "value":"6600000",
+        "units":"square miles"
+    },
+    "Size of Rhode Island": {
+        "value":"1545",
+        "units":"square miles"
+    },
+    "Land mass area of Asia":{
+        "value":"17212000",
+        "units":"square miles"
+    },
+    "Estimated number of stars in Milky Way":{
+        "value":"400000000000",
+        "units":"stars"
+    },
+    "Distance from Earth to Sun (miles)":{
+        "value":"93000000",
+        "units":"miles"
+    },
+    "Circumference of Jupiter":{
+        "value":"279118",
+        "units":"miles"
+    },
+    "Speed of sound":{
+        "value":"1126",
+        "units":"feet per second"
+    },
+    "Speed of Light":{
+        "value":"186000",
+        "units":"miles per second"
+    },
+    "Height of Earth's atmosphere":{
+        "value":"330000",
+        "units":"feet"
+    },
+    "Number of Christians in the World":{
+        "value":"2100000000",
+        "units":"Christians"
+    },
+    "Height of tallest building on Earth":{
+        "value":"2722",
+        "units":"feet"
+    },
+    "Height of Mt. Everest (feet)":{
+        "value":"29029",
+        "units":"feet"
+    },
+    "Depth of Mariana Trench":{
+        "value":"36070",
+        "units":"feet"
+    },
+    "Number of seconds in a (non-leap) year":{
+        "value":"31536000",
+        "units":"seconds"
+    },
+    "Record number of Tweets per second": {
+        "value":"143199",
+        "units":"tweets per second"
+    },
+    "Number of active users on Facebook (2015)":{
+        "value":"1490000000",
+        "units":"users"
+    },
+    "Approximate number of lenses in House Fly eyes":{
+        "value":"4000",
+        "units":"lenses"
+    },
+    "Average number of hairs on a person's head":{
+        "value":"150000",
+        "units":"hairs"
+    },
+    "Number of finishers in New York Marathon (2014)":{
+        "value":"50530",
+        "units":"finishers"
+    },
+    "Length of the Iditarod (miles)":{
+        "value":"1000",
+        "units":"miles"
+    },
+    "Approximate white-tail deer population in United States": {
+        "value":"30000000",
+        "units":"deer"
+    },
+    "Crusing Altitude of Boeing 747 (feet)": {
+        "value":"35000",
+        "units":"feet"
+    },
+    "Total weight of the Golden Gate Bridge": {
+        "value":"887000",
+        "units":"tons"
+    },
+    "Number of verses in Bible": {
+        "value":"31103",
+        "units":"verses"
+    }
 }

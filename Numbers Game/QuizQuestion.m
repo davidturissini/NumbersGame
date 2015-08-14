@@ -65,15 +65,19 @@
 
 
 - (NSArray *) refreshAnswers:(NSString *) currentQuestion currentAnswer:(NSString *)currentAnswer {
+    
+
     NSMutableArray *answers = [[NSMutableArray alloc] initWithObjects:currentAnswer, nil];
     int i = 0;
     NSArray *shuffledQuestions = [self shuffleArray:self.questions];
     
     while(answers.count < 4) {
-        NSString *k = [shuffledQuestions objectAtIndex:i];
+        NSString *questionKey = [shuffledQuestions objectAtIndex:i];
+        NSDictionary *q = [self.questionsAnswers objectForKey:questionKey];
+        NSString *string = (NSString *)[q objectForKey:@"value"];
         
-        if (k != currentQuestion) {
-            [answers addObject:[self.questionsAnswers objectForKey:k]];
+        if (questionKey != currentQuestion) {
+            [answers addObject:string];
         }
         
         i += 1;
@@ -87,7 +91,12 @@
 - (void) nextQuestion {
     self.questionResultView.hidden = YES;
     self.question = [self.currentQuestions objectAtIndex:0];
-    self.currentAnswer = (NSString *)[self.questionsAnswers objectForKey:self.question];
+    
+    NSDictionary *answerObj = [self.questionsAnswers objectForKey:self.question];
+
+    self.currentAnswer = (NSString *)[answerObj objectForKey:@"value"];
+    self.currentUnits = (NSString *)[answerObj objectForKey:@"units"];
+    
     
     
     NSRange range = NSMakeRange(1, self.currentQuestions.count - 1);
@@ -342,6 +351,13 @@
     NSString *answer = [self.answers objectAtIndex:indexPath.item];
     NSNumber *answerNumber = [[NSNumber alloc] initWithLongLong:[answer longLongValue]];
     NSString *formattedOutput = [formatter stringFromNumber:answerNumber];
+    
+    if (self.currentUnits != nil) {
+        formattedOutput = [NSString stringWithFormat:@"%@ %@",
+                       formattedOutput,
+                       self.currentUnits];
+    }
+    
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     cell.textLabel.text = formattedOutput;
     
