@@ -44,13 +44,15 @@
     self.answersTable.delegate = self;
     self.answersTable.dataSource = self;
     self.answersTable.scrollEnabled = NO;
+    self.answersTable.opaque = NO;
+    self.answersTable.backgroundColor = [UIColor clearColor];
     
     
     CGSize size = self.questionResultView.frame.size;
     self.questionResultView.layer.borderWidth = 5.0f;
     self.questionResultView.layer.cornerRadius = size.width / 2;
     
-    self.numQuestions = 10;
+    self.numQuestions = 1;
     numCorrect = 0;
     [self pickCurrentQuestions];
     [self nextQuestion];
@@ -341,6 +343,12 @@
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        
+        cell.opaque = NO;
+        cell.backgroundColor = [UIColor clearColor];
+        
+        cell.contentView.opaque = NO;
+        cell.contentView.backgroundColor = [UIColor clearColor];
     }
     
     cell.hidden = YES;
