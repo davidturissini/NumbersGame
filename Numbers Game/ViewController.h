@@ -13,6 +13,7 @@
 @interface ViewController : UIViewController
     @property (atomic) IBOutlet UILabel *label;
     @property (atomic) IBOutlet UIButton *button;
+    @property (atomic) IBOutlet UIView *numbersAnimation;
 
 @end
 

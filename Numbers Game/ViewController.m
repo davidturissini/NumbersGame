@@ -17,7 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self animateNumbers];
 
+}
+
+- (void) animateNumbers {
+    int viewWidth = self.numbersAnimation.frame.size.width;
+    
+    [UIView animateWithDuration:60
+                          delay:0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         self.numbersAnimation.layer.transform = CATransform3DMakeTranslation(-viewWidth, 0, 0);
+                     }
+                     completion:^(BOOL finished) {
+                         
+                         
+                     }
+     ];
 }
 
 - (void)didReceiveMemoryWarning {
