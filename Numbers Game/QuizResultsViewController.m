@@ -23,7 +23,7 @@
                                self.numCorrect,
                                self.numQuestions
                                ];
-    NSLog(@"didload");
+
     self.resultsLabel.text = resultsString;
 }
 

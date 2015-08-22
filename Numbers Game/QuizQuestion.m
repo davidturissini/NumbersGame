@@ -48,9 +48,6 @@
     self.answersTable.backgroundColor = [UIColor clearColor];
     
     
-    CGSize size = self.questionResultView.frame.size;
-    self.questionResultView.layer.borderWidth = 5.0f;
-    self.questionResultView.layer.cornerRadius = size.width / 2;
     
     self.numQuestions = 1;
     numCorrect = 0;
@@ -335,6 +332,8 @@
     
 }
 
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellIdentifier = @"AnswerCell";
@@ -349,6 +348,10 @@
         
         cell.contentView.opaque = NO;
         cell.contentView.backgroundColor = [UIColor clearColor];
+        
+        UIView *selectedBackgroundView = [[UIView alloc] initWithFrame:cell.contentView.frame];
+        selectedBackgroundView.backgroundColor = [[UIColor alloc] initWithRed:0.0 green:0.0 blue:0.0 alpha:0.3];
+        cell.selectedBackgroundView = selectedBackgroundView;
     }
     
     cell.hidden = YES;
