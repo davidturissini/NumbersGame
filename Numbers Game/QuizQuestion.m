@@ -49,7 +49,7 @@
     
     
     
-    self.numQuestions = 1;
+    self.numQuestions = 10;
     numCorrect = 0;
     [self pickCurrentQuestions];
     [self nextQuestion];
@@ -63,25 +63,13 @@
 }
 
 
-- (NSArray *) refreshAnswers:(NSString *) currentQuestion currentAnswer:(NSString *)currentAnswer {
+- (NSArray *) refreshAnswers:(NSDictionary *)currentQuestionDict {
     
 
-    NSMutableArray *answers = [[NSMutableArray alloc] initWithObjects:currentAnswer, nil];
-    int i = 0;
-    NSArray *shuffledQuestions = [self shuffleArray:self.questions];
+    NSMutableArray *answers = [[NSMutableArray alloc]
+                               initWithArray:[currentQuestionDict objectForKey:@"otherValues"]];
     
-    while(answers.count < 4) {
-        NSString *questionKey = [shuffledQuestions objectAtIndex:i];
-        NSDictionary *q = [self.questionsAnswers objectForKey:questionKey];
-        NSString *string = (NSString *)[q objectForKey:@"value"];
-        
-        if (questionKey != currentQuestion) {
-            [answers addObject:string];
-        }
-        
-        i += 1;
-    }
-    
+    [answers addObject:[currentQuestionDict objectForKey:@"value"]];    
     
     return [[NSArray alloc] initWithArray:[self shuffleArray:answers]];
 }
@@ -100,9 +88,10 @@
     
     NSRange range = NSMakeRange(1, self.currentQuestions.count - 1);
     self.currentQuestions = [self.currentQuestions subarrayWithRange:range];
-    self.answers = [self refreshAnswers:self.question currentAnswer:self.currentAnswer];
+    self.answers = [self refreshAnswers:answerObj];
     
     [self refreshViews];
+    self.answersTable.userInteractionEnabled = YES;
     
 }
 
@@ -110,11 +99,13 @@
     self.questionText.text = self.question;
     
     [self.answersTable reloadData];
-    [self animateTableCellsIn:^{
-        [self animateQuestionLabelIn:^{
-            
+    
+    [self animateQuestionLabelIn:^{
+        [self animateTableCellsIn:^{
+                
         }];
     }];
+    
 }
 
 - (void)showResults {
@@ -146,6 +137,7 @@
 
 - (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSString *answer = [self.answers objectAtIndex:indexPath.item];
+    self.answersTable.userInteractionEnabled = NO;
     
     if (answer == self.currentAnswer) {
         numCorrect += 1;
@@ -365,7 +357,7 @@
     
     if (self.currentUnits != nil) {
         formattedOutput = [NSString stringWithFormat:@"%@ %@",
-                       formattedOutput,
+                       answer,
                        self.currentUnits];
     }
     

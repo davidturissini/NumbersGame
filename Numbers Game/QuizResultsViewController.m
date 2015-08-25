@@ -19,12 +19,38 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSString *resultsString = [NSString stringWithFormat:@"You got %d out of %d correct!",
+    NSString *resultsString = [NSString stringWithFormat:@"You got %d out of %d correct",
                                self.numCorrect,
                                self.numQuestions
                                ];
-
+    
+    self.badgeStrings = [[NSArray alloc] initWithObjects:
+                         @"Congratulations! You definitely know your numbers!",
+                         @"You know your numbers, but you could know more!",
+                         @"Keep trying!",
+                         nil
+                         ];
+    float percentCorrect = ((float)self.numCorrect / (float)self.numQuestions);
+    
+    self.badgeLabel.text = [self getBadgeLabelText:percentCorrect];
+    
     self.resultsLabel.text = resultsString;
+}
+
+- (NSString *) getBadgeLabelText:(float)percentCorrect {
+    
+    int badgeIndex = 2;
+    
+    if (percentCorrect >= 0.8f) {
+        badgeIndex = 0;
+    } else if (percentCorrect >= 0.4f) {
+        badgeIndex = 1;
+    }
+    
+    NSString *str = (NSString *)[self.badgeStrings objectAtIndex:badgeIndex];
+    
+    return str;
+    
 }
 
 - (void)didReceiveMemoryWarning {

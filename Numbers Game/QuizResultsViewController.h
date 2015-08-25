@@ -11,6 +11,8 @@
 
 @interface QuizResultsViewController : UIViewController
     @property (nonatomic) IBOutlet UILabel *resultsLabel;
+    @property (nonatomic) IBOutlet UILabel *badgeLabel;
     @property (nonatomic) int numCorrect;
     @property (nonatomic) int numQuestions;
+    @property (nonatomic) NSArray *badgeStrings;
 @end

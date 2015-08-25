@@ -1,139 +1,419 @@
 {
     "What is the circumference of Earth?":{
-        "value":24901,
-        "units":"miles"
+        "value":"24,901",
+        "units":"miles",
+        "otherValues":[
+            "30,119",
+            "19,234",
+            "22,392"
+        ],
+        "explanation":24901
     },
     "What was the population of New York City in 2014?":{
-        "value":19746227,
-        "units":"people"
+        "value":"19,746,227",
+        "units":"people",
+        "otherValues":[
+                       "18,746,227",
+                       "21,746,227",
+                       "39,746,227"
+                       ],
+        "explanation":19746227
     },
-    "What was the population of United States in 2014?":{
-        "value":318857056,
-        "units":"people"
+    "What was the approximate population of United States in 2014?":{
+        "value":"318 million",
+        "units":"people",
+        "otherValues":[
+                       "324 million",
+                       "293 million",
+                       "1.49 billion"],
+        "explanation":318857056
     },
     "How big is Russia?":{
-        "value":6600000,
-        "units":"square miles"
+        "value":"6.6 million",
+        "units":"square miles",
+        "otherValues":[
+                       "6.2 million",
+                       "7.1 million",
+                       "5.8 million"
+                       ]
     },
     "How big is Rhode Island": {
-        "value":1545,
-        "units":"square miles"
+        "value":"1,545",
+        "units":"square miles",
+        "otherValues":[
+                       "1,605",
+                       "985",
+                       "2,504"
+                       ]
     },
     "How big is Asia?":{
-        "value":17212000,
-        "units":"square miles"
+        "value":"17,212,000",
+        "units":"square miles",
+        "otherValues":[
+                       "20,746,246",
+                       "12,102,372",
+                       "9,524,392"]
     },
     "How many stars are estimated to be in the Milky Way?":{
-        "value":400000000000,
-        "units":"stars"
+        "value":"400 billion",
+        "units":"stars",
+        "otherValues":[
+                       "100 billion",
+                       "500 billion",
+                       "94 million"
+                       ]
     },
     "What is the distance from the Earth to the Sun?":{
-        "value":93000000,
-        "units":"miles"
+        "value":"93 million",
+        "units":"miles",
+        "otherValues":[
+                       "100 million",
+                       "47 million",
+                       "63 million"
+                       ]
     },
     "What is the circumference of Jupiter?":{
-        "value":279118,
-        "units":"miles"
+        "value":"279,118",
+        "units":"miles",
+        "otherValues":[
+                       "300,038",
+                       "180,379",
+                       "200,183"
+                    ]
     },
     "How fast does sound travel?":{
-        "value":1126,
-        "units":"feet per second"
+        "value":"1,126",
+        "units":"feet per second",
+        "otherValues":[
+                       "2,000",
+                       "1,435",
+                       "939"
+                    ]
     },
     "How fast does light travel?":{
-        "value":186000,
-        "units":"miles per second"
+        "value":"186,000",
+        "units":"miles per second",
+        "otherValues":[
+                       "193,000",
+                       "202,000",
+                       "180,000"
+                       ]
     },
     "What is the height of Earth's atmosphere?":{
-        "value":330000,
-        "units":"feet"
+        "value":"330,000",
+        "units":"feet",
+        "otherValues":[
+                       "320,000",
+                       "293,000",
+                       "354,000"
+                       ]
     },
     "How many Christians are there in the World?":{
-        "value":2100000000,
-        "units":"Christians"
+        "value":"2.1 billion",
+        "units":"Christians",
+        "otherValues":[
+                       "1.9 billion",
+                       "3.2 billion",
+                       "1.6 billion"
+                        ]
     },
     "What is the height of world's tallest building?":{
-        "value":2722,
-        "units":"feet"
+        "value":"2,722",
+        "units":"feet",
+        "otherValues":[
+                       "2,154",
+                       "1,872",
+                       "3,103"
+                       ]
     },
     "How tall is Mt. Everest?":{
-        "value":29029,
-        "units":"feet"
+        "value":"29,029",
+        "units":"feet",
+        "otherValues":[
+                       "30,021",
+                       "27,994",
+                       "28,625"
+                       ]
     },
     "What is the depth of the Mariana Trench?":{
-        "value":36070,
-        "units":"feet"
+        "value":"36,070",
+        "units":"feet",
+        "otherValues":[
+                       "35,100",
+                       "42,726",
+                       "38,423"
+                       ]
     },
     "How many seconds are in a non-leap year?":{
-        "value":31536000,
-        "units":"seconds"
+        "value":"31.536 million",
+        "units":"seconds",
+        "otherValues":[
+                       "32.329 million",
+                       "31.023 million",
+                       "32.019 million"
+                       ]
     },
     "What is the record number of Tweets per second?": {
-        "value":143199,
-        "units":"tweets per second"
+        "value":"143,199",
+        "units":"tweets per second",
+        "otherValues":[
+                       "344,319",
+                       "92,379",
+                       "276,979"
+                       ]
     },
     "How many active users did Facebook have in 2015?":{
-        "value":1490000000,
-        "units":"users"
+        "value":"1.49 billion",
+        "units":"users",
+        "otherValues":[
+                       "4.23 billion",
+                       "3.87 billion",
+                       "983 million"
+                       ]
     },
     "How many lenses are there on a House Fly's eyes?":{
-        "value":4000,
-        "units":"lenses"
+        "value":"4,000",
+        "units":"lenses",
+        "otherValues":[
+                       "3,000",
+                       "5,000",
+                       "6,000"
+                       ]
     },
     "What is the average number of hairs on a person's head?":{
-        "value":150000,
-        "units":"hairs"
+        "value":"150,000",
+        "units":"hairs",
+        "otherValues":[
+                       "140,000",
+                       "120,000",
+                       "130,000"
+                       ]
     },
     "How many runners finished the New York Marathon in 2014?":{
-        "value":50530,
-        "units":"runners"
+        "value":"50,530",
+        "units":"runners",
+        "otherValues":[
+                       "47,930",
+                       "52,420",
+                       "44,391"
+                       ]
     },
     "How long is the Iditarod race?":{
-        "value":1000,
-        "units":"miles"
+        "value":"1,000",
+        "units":"miles",
+        "otherValues":[
+                       "900",
+                       "1,100",
+                       "750"
+                       ]
     },
     "How many white-tail deer live in United States?": {
-        "value":30000000,
-        "units":"deer"
+        "value":"30 million",
+        "units":"deer",
+        "otherValues":[
+                       "20 million",
+                       "26 million",
+                       "29 million"
+                       ]
     },
     "What is the crusing altitude of a Boeing 747?": {
-        "value":35000,
-        "units":"feet"
+        "value":"35,000",
+        "units":"feet",
+        "otherValues":[
+                       "43,500",
+                       "37,000",
+                       "42,000"
+                       ]
     },
     "How much does the Golden Gate Bridge weigh?": {
-        "value":887000,
-        "units":"tons"
+        "value":"887,000",
+        "units":"tons",
+        "otherValues":[
+                       "910,200",
+                       "840,000",
+                       "878,000"
+                       ]
     },
     "How many verses are there in the Bible": {
-        "value":31103,
-        "units":"verses"
+        "value":"31,103",
+        "units":"verses",
+        "otherValues":[
+                       "32,829",
+                       "29,837",
+                       "30,492"
+                       ]
     },
     "How big is Grand Canyon National Park?": {
-        "value":1217262,
-        "units":"acres"
+        "value":"1.21 million",
+        "units":"acres",
+        "otherValues":[
+                       "1.8 million",
+                       "0.8 million",
+                       "2 million"
+        ],
+        "explanation":1217262
     },
     "How big is the Pacific Ocean?": {
-        "value":63800000,
-        "units":"square miles"
+        "value":"63.8 million",
+        "units":"square miles",
+        "otherValues":[
+                       "70.3 million",
+                       "54.1 million",
+                       "48 million"
+        ]
     },
     "How many pixels are there on the iPhone 6 screen?": {
-        "value":1000500,
-        "units":"pixels"
+        "value":"1 million 5 hundred",
+        "units":"pixels",
+        "otherValues":[
+            "2 million 6 hundred",
+            "1.3 million",
+            "1 million"
+        ]
     },
     "How many square feet are in an acre?": {
-        "value":43560,
-        "units":"square feet"
+        "value":"43,560",
+        "units":"square feet",
+        "otherValues":[
+                       "41,390",
+                       "46,730",
+                       "40,000"
+                       ]
     },
     "Approximately how many calories are in an apple pie?": {
-        "value":2200,
-        "units":"calories"
+        "value":"2,200",
+        "units":"calories",
+        "otherValues":[
+                       "1,900",
+                       "3,300",
+                       "2,800"
+                       ]
     },
     "How many electoral votes are there in a presidental election?": {
-        "value":538,
-        "units":"votes"
+        "value":"538",
+        "units":"votes",
+        "otherValues":[
+                       "514",
+                       "597",
+                       "615"
+                       ]
     },
     "How many fluid ounces are in a gallon": {
-        "value":128,
-        "units":"fluid ounces"
+        "value":"128",
+        "units":"fluid ounces",
+        "otherValues":[
+                       "164",
+                       "132",
+                       "96"
+                       ]
+    },
+    "How many ounces in a pound?": {
+        "value":"16",
+        "units":"ounces",
+        "otherValues": [
+            "12",
+                        "14",
+                        "10"
+                        ]
+    },
+    "How many grams in an ounce?": {
+        "value":"28.3495",
+        "units":"grams",
+        "otherValues":[
+                       "29.039",
+                       "27.837",
+                       "28.003"
+                       ]
+    },
+    "How many ammendments does the U.S. Constitution have?": {
+        "value":"27",
+        "units":"ammendments",
+        "otherValues":[
+                       "20",
+                       "31",
+                       "14"
+                       ]
+    },
+    "How many countries in the world?": {
+        "value":"196",
+        "units":"countries",
+        "otherValues": [
+                        "204",
+                        "184",
+                        "219"
+                        ]
+    },
+    "How many languages are there in the world?": {
+        "value":"6,500",
+        "units":"languages",
+        "otherValues": [
+                        "5,700",
+                        "6,100",
+                        "7,350"
+                        ]
+    },
+    "How many feet in a meter?": {
+        "value":"3.38084",
+        "units":"feet",
+        "otherValues": [
+                        "4.10384",
+                        "3.0134",
+                        "3.1391"
+                        ]
+    },
+    "How many James Bond movies are there?": {
+        "value":"23",
+        "units":"movies",
+        "otherValues": [
+                        "21",
+                        "19",
+                        "27"
+                        ]
+    },
+    "How many megabytes are in a gigabyte": {
+        "value":"1024",
+        "units":"megabytes",
+        "otherValues": [
+                        "1000",
+                        "1048",
+                        "1064"
+                        ]
+    },
+    "How many national parks are in the United States?": {
+        "value":"58",
+        "units":"parks",
+        "otherValues": [
+                        "51",
+                        "64",
+                        "42"
+                        ]
+    },
+    "How many rings does Saturn have?": {
+        "value":"7",
+        "units":"rings",
+        "otherValues": [
+            "8",
+                        "6",
+                        "5"
+        ]
+    },
+    "How many presidents has the United States had?": {
+        "value":"43",
+        "units":"presidents",
+        "otherValues":[
+            "41",
+                       "47",
+                       "45"
+        ]
+    },
+    "How many zip codes are there in the United States?": {
+        "value":"43,000",
+        "units":"zip codes",
+        "otherValues":[
+            "41,000",
+                       "38,000",
+                       "37,000"
+        ]
     }
     
 }
